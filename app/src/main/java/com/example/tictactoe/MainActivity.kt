@@ -45,30 +45,40 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun placePlayer(pos: Int) {
+        // If there is no winner go ahead and run this block of code
         if (winner == "") {
             try {
 
                 val display = findViewById<TextView>(R.id.display)
 
+                // Check if you can change the position that was clicked, if not
+                // than don't change anything
                 if (positions.get(pos - 1) != "_ ") {
                     return
                 }
 
+                // Apply the change to the board according to the button clicked
                 positions.set(pos - 1, player)
 
                 display.text = updateDisplay()
 
+                // If there is a winner display the winner and break out of the
+                // function
                 if (isWinner()) {
                     winner = player
                     playerWinMessage()
                     return
                 }
 
+                // If there is no winner by the time every position has been
+                // played, or 8 turns, then declare it a cat's game and break
+                // out of the function
                 if (noWinner()) {
                     winner = "TIE"
                     return
                 }
 
+                // Update who is the current player and display it
                 updatePlayer()
 
             } catch (e: Exception) {
