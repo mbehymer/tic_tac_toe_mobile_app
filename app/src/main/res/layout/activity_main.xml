@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEBCD"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/center_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:background="#C3A388"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/display" />
+
+    <Button
+        android:id="@+id/center_top_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:background="#C3A388"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/center_btn"
+        app:layout_constraintStart_toStartOf="@+id/center_btn" />
+
+    <Button
+        android:id="@+id/top_right_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="19dp"
+        android:background="#C3A388"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/center_btn"
+        app:layout_constraintStart_toEndOf="@+id/center_btn" />
+
+    <Button
+        android:id="@+id/top_left_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#C3A388"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/center_btn"
+        app:layout_constraintEnd_toStartOf="@+id/center_btn" />
+
+    <Button
+        android:id="@+id/center_left_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="#C3A388"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/center_btn"
+        app:layout_constraintTop_toTopOf="@+id/center_btn" />
+
+    <Button
+        android:id="@+id/bottom_left_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#C3A388"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/center_btn"
+        app:layout_constraintTop_toBottomOf="@+id/center_btn" />
+
+    <Button
+        android:id="@+id/center_bottom_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:background="#C3A388"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/center_btn"
+        app:layout_constraintTop_toBottomOf="@+id/center_btn" />
+
+    <Button
+        android:id="@+id/center_right_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:background="#C3A388"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toEndOf="@+id/center_btn"
+        app:layout_constraintTop_toTopOf="@+id/center_btn" />
+
+    <Button
+        android:id="@+id/bottom_right_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:background="#C3A388"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toEndOf="@+id/center_btn"
+        app:layout_constraintTop_toBottomOf="@+id/center_btn" />
+
+    <TextView
+        android:id="@+id/playerTurn"
+        android:layout_width="191dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="36dp"
+        android:width="2px"
+        android:background="#7E034D87"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Player X's Turn"
+        android:textAlignment="center"
+        android:textColor="#88000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="154dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="76dp"
+        android:background="#59F8F8F8"
+        android:text=" _  | _  | _  \n _  | _  | _  \n _  | _  | _  "
+        android:textAlignment="center"
+        android:textColor="#503301"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerTurn" />
+
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:background="#6F036107"
+        android:text="Reset"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/center_bottom_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
